@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cri_MCLG_.MainPage">
+
+    <StackLayout BackgroundColor="#C6D0DA">
+        <Frame BackgroundColor="#223347" Padding="10" CornerRadius="0">
+            <Label Text="Actividad: critografo" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+        <StackLayout Margin="15,10">
+            <Label Text="Nombre: "
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       FontSize="18"/>
+            <Entry Placeholder="Ingrese el nombre"
+                       PlaceholderColor="Gray"
+                       TextTransform="Lowercase" 
+                       Keyboard="Text"
+                   x:Name="Nombre"/>
+
+            <Label Text="Genero: "
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"
+                   FontSize="18"/>
+            <RadioButton Content="Hombre" 
+                         IsChecked="True" 
+                         Value="Hombre" 
+                         FontSize="15"
+                         x:Name="RadioBHombre"/>
+            <RadioButton Content="Mujer" 
+                         IsChecked="False" 
+                         Value="Mujer" 
+                         FontSize="15"/>
+
+            <Label Text="Atributos "
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       FontSize="18"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"></ColumnDefinition>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <CheckBox Grid.Row="1" 
+                          Grid.Column="1" 
+                          VerticalOptions="Center"
+                          x:Name="alto"/>
+                <Label Grid.Row="1" 
+                       Grid.Column="2" 
+                       Text="Alto" 
+                       FontSize="15" 
+                       VerticalOptions="Center" 
+                       TextColor="Black" />
+
+                <CheckBox Grid.Row="2" 
+                          Grid.Column="1" 
+                          VerticalOptions="Center"
+                          x:Name="listo"/>
+                <Label Grid.Row="2" 
+                       Grid.Column="2" 
+                       Text="Listo" 
+                       FontSize="15" 
+                       VerticalOptions="Center" 
+                       TextColor="Black"/>
+
+                <CheckBox Grid.Row="3" 
+                          Grid.Column="1"  
+                          IsChecked="true" 
+                          VerticalOptions="Center" 
+                          x:Name="raro"/>
+                <Label Grid.Row="3" 
+                       Grid.Column="2" 
+                       Text="Raro" 
+                       FontSize="15" 
+                       VerticalOptions="Center" 
+                       TextColor="Black"/>
+
+                <CheckBox Grid.Row="1" 
+                          Grid.Column="3" 
+                          VerticalOptions="Center" 
+                          x:Name="chaparro"/>
+                <Label Grid.Row="1" 
+                       Grid.Column="4" 
+                       Text="Chaparro" 
+                       FontSize="15" 
+                       VerticalOptions="Center" 
+                       TextColor="Black"/>
+
+                <CheckBox Grid.Row="2" 
+                          Grid.Column="3" 
+                          VerticalOptions="Center"
+                          x:Name="extravagante"/>
+                <Label Grid.Row="2" 
+                       Grid.Column="4" 
+                       Text="Extravagante" 
+                       FontSize="15" 
+                       VerticalOptions="Center" 
+                       TextColor="Black" />
+
+                <CheckBox Grid.Row="3"
+                          Grid.Column="3"  
+                          IsChecked="true" 
+                          VerticalOptions="Center"
+                          x:Name="grande"/>
+                <Label Grid.Row="3" 
+                       Grid.Column="4" 
+                       Text="Grande" 
+                       FontSize="15" 
+                       VerticalOptions="Center" 
+                       TextColor="Black"/>
+            </Grid>
+
+            <Button Text="Criticar" 
+                    BorderColor="White" 
+                    BorderWidth="0.25" 
+                    CornerRadius="20" 
+                    Margin="10,25" 
+                    BackgroundColor="#547392"
+                    Clicked="Button_Clicked"/>
+
+            <Frame BorderColor="Gray">
+                <Editor IsReadOnly="True" 
+                        FontSize="16" 
+                        PlaceholderColor="Gray" 
+                        Placeholder="Critica" 
+                        AutoSize="TextChanges" 
+                        x:Name="criticaEditor"/>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
